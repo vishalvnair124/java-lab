@@ -1,4 +1,4 @@
-
+//write a program for demonstrate Constructor overloading
 class Employee {
     private String name;
     private int employeeId;
@@ -42,3 +42,16 @@ class Constructoroverloading {
         emp3.display();
     }
 }
+
+
+// Name: John Doe                                                    
+// Employee ID: 0                                        
+// Salary: 0.0
+
+// Name: Jane Smith
+// Employee ID: 12345
+// Salary: 0.0
+
+// Name: Mike Johnson
+// Employee ID: 67890
+// Salary: 5000.0
