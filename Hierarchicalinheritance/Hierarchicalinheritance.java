@@ -2,8 +2,6 @@
 
 // Base class
 
-import Constructoroverloading.Employee;
-
 class Employee {
     protected String name;
     protected double salary;

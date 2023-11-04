@@ -35,7 +35,7 @@ class Circle extends Shape {
 }
 
 
-public class MethodDispatch {
+public class Methoddispatch {
     public static void main(String[] args) {
         Shape shape;
         shape = new Shape();
