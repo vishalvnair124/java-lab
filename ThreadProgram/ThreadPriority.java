@@ -49,13 +49,13 @@ public class ThreadPriority {
     }
 }
 
+// Thread A: 1
 // Thread B: 1
 // Thread B: 2
 // Thread B: 3
 // Thread B: 4
 // Thread B: 5
 // Exit from B
-// Thread A: 1
 // Thread C: 1
 // Thread C: 2
 // Thread C: 3
