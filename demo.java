@@ -5,12 +5,12 @@ class demo extends Frame implements ItemListener {
     demo() {
         setBounds(100, 100, 500, 500);
         Label label =new Label("                                                               ");
-       
-        Checkbox c1 = new Checkbox("hello",false);
-        Checkbox c2 = new Checkbox("hai",!true);
+       CheckboxGroup cbg= new CheckboxGroup();
+        Checkbox c1 = new Checkbox("hello",cbg,false);
+        Checkbox c2 = new Checkbox("hai",cbg,true);
         add(c1);
         add(c2);
-         add(label);
+        add(label);
         c1.addItemListener( new ItemListener() {
          public void itemStateChanged(ItemEvent e) {
          label.setText("C++ Checkbox: "  + (e.getStateChange()==1?"checked":"unchecked")); 
