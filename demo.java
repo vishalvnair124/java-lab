@@ -1,34 +1,41 @@
 import java.awt.*;
 import java.awt.event.*;
 
+
 class demo extends Frame implements ItemListener {
     demo() {
         setBounds(100, 100, 500, 500);
-        Label label =new Label("                                                               ");
-       CheckboxGroup cbg= new CheckboxGroup();
-        Checkbox c1 = new Checkbox("hello",cbg,false);
-        Checkbox c2 = new Checkbox("hai",cbg,true);
-        add(c1);
-        add(c2);
+        Label label = new Label("                                                               ");
+        Choice c = new Choice();
+        c.add("hello");
+        c.add("hai");
+        c.add("he");
         add(label);
-        c1.addItemListener( new ItemListener() {
-         public void itemStateChanged(ItemEvent e) {
-         label.setText("C++ Checkbox: "  + (e.getStateChange()==1?"checked":"unchecked")); 
-     }   
-                
+        add(c);
+        Button button=new Button("hello");
+        add(button);
+        
+        c.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+            System.out.println(c.getSelectedIndex());
+            System.out.println(c.getSelectedItem());
+          
+            }
+
         });
-        c2.addItemListener(this);
-        setLayout(new FlowLayout());
+
+        setLayout(new GridLayout(1,2));
     }
 
     public static void main(String vidhal[]) {
         System.out.println("hello ");
+        try { System.in.read();}catch(Exception ex){}
         new demo().setVisible(true);
 
     }
 
     public void itemStateChanged(ItemEvent e) {
-       
-     }   
- 
+
+    }
+
 }

@@ -1,30 +1,19 @@
+//write a program for demonstrate user defined exception
 
-//wirte  program for showing user defined exception 
 import java.util.Scanner;
 
-// class representing custom exception
+// Class representing custom exception
 class InvalidAgeException extends Exception {
     public InvalidAgeException(String str) {
-        // calling the constructor of parent Exception
+        // Calling the constructor of the parent Exception
         super(str);
     }
 }
 
-// class that uses custom exception InvalidAgeException
+// Class that uses custom exception InvalidAgeException
 public class userExp {
 
-    // method to check the age
-    static void validate(int age) throws InvalidAgeException {
-        if (age < 18) {
-
-            // throw an object of user-defined exception
-            throw new InvalidAgeException("Age is not valid to vote");
-        } else {
-            System.out.println("Age is valid to vote");
-        }
-    }
-
-    // main method
+    // Main method
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         try {
@@ -34,21 +23,27 @@ public class userExp {
             // Read the integer input
             int age = scanner.nextInt();
 
-            // calling the method
-            validate(age);
-        } catch (InvalidAgeException ex) {
+            // Calling the method
+            if (age < 18) {
+                // Throw an object of user-defined exception
+                throw new InvalidAgeException("Age is not valid to vote");
+            } else {
+                System.out.println("Age is valid to vote");
+            }
+        } catch (InvalidAgeException e) {
+            // Handle the custom exception
             System.out.println("Caught the exception");
-
-            // printing the message from InvalidAgeException object
-            System.out.println("Exception occurred: " + ex);
+            System.out.println("Exception occurred: " + e.getMessage());
         } catch (Exception e) {
+            // Handle other exceptions (e.g., InputMismatchException)
             System.out.println("Invalid input. Please enter a valid integer.");
-        } 
-        
+        } finally {
+            // Close the scanner in the finally block to ensure it gets closed even if an exception occurs
+            scanner.close();
+        }
     }
 }
 
-
-// Enter your age: 6
+// Enter your age: 15
 // Caught the exception
-// Exception occurred: InvalidAgeException: Age is not valid to vote
+// Exception occurred: Age is not valid to vote
