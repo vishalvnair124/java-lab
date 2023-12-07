@@ -8,7 +8,3 @@ g.drawString("welcome to applet",150,150);
 }  
   
 }  
-/* 
-<applet code="app.class" width="300" height="300"> 
-</applet> 
-*/  
