@@ -47,8 +47,7 @@ public class SwingApp extends JApplet implements ItemListener {
         JFrame frame = new JFrame("SwingApp");
         SwingApp applet = new SwingApp();
         frame.getContentPane().add(applet, BorderLayout.CENTER);
-        applet.init();
-        applet.start();
+        
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
