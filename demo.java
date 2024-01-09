@@ -29,7 +29,8 @@ class demo extends Frame implements ItemListener {
 
     public static void main(String vidhal[]) {
         System.out.println("hello ");
-        try { System.in.read();}catch(Exception ex){}
+        try { int h =System.in.read();System.out.println(h);}catch(Exception ex){}
+         
         new demo().setVisible(true);
 
     }
