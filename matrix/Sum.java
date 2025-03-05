@@ -15,7 +15,6 @@ public class Sum {
             }
         }
 
-        // Sum of each row
         for (int i = 0; i < m; i++) {
             int rowSum = 0;
             for (int j = 0; j < n; j++) {
@@ -25,7 +24,7 @@ public class Sum {
             System.out.println(": " + rowSum);
         }
 
-        // Sum of each column
+
         for (int j = 0; j < n; j++) {
             int colSum = 0;
             for (int i = 0; i < m; i++) {
