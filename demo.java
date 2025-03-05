@@ -1,42 +1,27 @@
-import java.awt.*;
-import java.awt.event.*;
+class demo {
+    
+
+    public static void main(String[] args) {
+        d obj = new d();
+        System.out.println(obj.add(1, 2));
+        System.out.println(obj.add(1.0, 2.0));
+        System.out.println(obj.add("Hello", "World"));
 
 
-class demo extends Frame implements ItemListener {
-    demo() {
-        setBounds(100, 100, 500, 500);
-        Label label = new Label("                                                               ");
-        Choice c = new Choice();
-        c.add("hello");
-        c.add("hai");
-        c.add("he");
-        add(label);
-        add(c);
-        Button button=new Button("hello");
-        add(button);
-        
-        c.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-            System.out.println(c.getSelectedIndex());
-            System.out.println(c.getSelectedItem());
-          
-            }
-
-        });
-
-        setLayout(new GridLayout(1,2));
-    }
-
-    public static void main(String vidhal[]) {
-        System.out.println("hello ");
-        try { int h =System.in.read();System.out.println(h);}catch(Exception ex){}
-         
-        new demo().setVisible(true);
 
     }
+}
 
-    public void itemStateChanged(ItemEvent e) {
-
+class d {
+    public int add(int a, int b) {
+        return a + b;
     }
 
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    public String add(String a, String b) {
+        return a + " " + b;
+    }
 }
