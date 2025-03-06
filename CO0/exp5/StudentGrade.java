@@ -4,13 +4,12 @@ public class StudentGrade {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        // Input percentage
+        
         System.out.println("Enter student's percentage: ");
         int percentage = sc.nextInt();
         
         char grade;
         
-        // Determine grade using if-else
         if (percentage >= 90) {
             grade = 'A';
         } else if (percentage >= 80) {
@@ -23,7 +22,6 @@ public class StudentGrade {
             grade = 'F';
         }
         
-        // Provide feedback using switch
         switch (grade) {
             case 'A': System.out.println("Grade: A - Excellent work!"); break;
             case 'B': System.out.println("Grade: B - Good job!"); break;
